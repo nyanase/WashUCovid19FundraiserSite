@@ -1,2 +1,2 @@
-class Plan < ApplicationRecord
+class Plan < ApplicationRecord 
 end
