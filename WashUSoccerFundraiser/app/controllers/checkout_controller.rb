@@ -4,7 +4,7 @@ class CheckoutController < ApplicationController
 
         if @plan.nil?
             redirect_to root_path
-            return
+            return 
         end
         
         #Set up stripe sesssion for payment
