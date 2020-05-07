@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :plans
   get 'home/index'
   get 'home/show_team'
   post 'home/show_team'
@@ -9,7 +10,6 @@ Rails.application.routes.draw do
     get 'success', to: 'checkout#success', as: 'checkout_success'
 
   end
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   root 'home#index'
 end

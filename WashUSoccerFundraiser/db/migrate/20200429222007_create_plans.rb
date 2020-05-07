@@ -4,7 +4,6 @@ class CreatePlans < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :description
       t.integer :price_cents
-      t.integer :flat_donation
 
       t.timestamps
     end

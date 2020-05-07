@@ -3,7 +3,7 @@ class HomeController < ApplicationController
   end
 
   def show_team
-
+    @Plans = Plan.all
   end
 
   def show_players

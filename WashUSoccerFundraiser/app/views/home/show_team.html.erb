@@ -4,12 +4,14 @@
 
 <div>
     <h2>Sponsorship Plans:</h2>
-    <div>
-        <h3>Flat Donation: $100</h3>
-    </div>
-    <div>
-        <h3>
-
-        </h3>
-    </div>
+    <% @Plans.each do |plan| %>
+        <div>
+            <h3><%= plan.name %></h3>
+            <p><%= plan.description %></p>
+            <p>Price: $<%= sprintf("%.2f", (plan.price_cents / 100.0)) %></p>
+            <%= button_to 'Sponsor', checkout_create_path, method: :post, remote:true, params: {id: plan.id} %>
+        </div>
+    <% end %>
 </div>
+
+<%= link_to 'Back', root_path %>
